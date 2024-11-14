@@ -1,7 +1,8 @@
 run("G:/Meine Ablage/Ausbildung/Wirtschaftsmathematik und Statistik/Seminar GPA for fast derivative pricing/Fast_derivative_pricing_using_Gaussian_Process_Regression/gpml-matlab-master/startup.m");
+pkg load statistics
 
 % Set Black-Scholes parameters for the sample data
-sample_size = 1000;
+sample_size = 100;
 S = 95 + 10 * rand(sample_size, 1);       % Stock prices
 K = 100;                                   % Strike price (constant)
 T = 0.5 + 1 * rand(sample_size, 1);        % Time to maturity
