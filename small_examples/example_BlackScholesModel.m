@@ -1,5 +1,5 @@
 % Initialize the GPML toolbox
-run("G:/Meine Ablage/Ausbildung/Wirtschaftsmathematik und Statistik/Seminar GPA for fast derivative pricing/Fast_derivative_pricing_using_Gaussian_Process_Regression/gpml-matlab-master/startup.m");
+run("G:/Meine Ablage/Ausbildung/BSc. Wirtschaftsmathematik und Statistik/FVM Seminar/Fast_derivative_pricing_using_Gaussian_Process_Regression/gpml-matlab-master/startup.m");
 pkg load statistics
 
 % Set Black-Scholes parameters for the sample data
