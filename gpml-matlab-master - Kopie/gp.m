@@ -20,7 +20,7 @@ function [varargout] = gp(hyp, inf, mean, cov, lik, x, y, xs, ys)
 % where:
 %
 %   hyp      struct of column vectors of mean/cov/lik hyperparameters
-%   inf      function specifying the inference method
+%   inf      function specifying the inference method 
 %   mean     prior mean function
 %   cov      prior covariance function
 %   lik      likelihood function
@@ -72,7 +72,7 @@ if size(y,2)>1      % deal with (independent) multivariate output y by recursing
       if nargout>no                                           % concatenate post
         if i==2, varargout{no+1} = {varargout{no+1},out{no+1}};
         else varargout{no+1} = {varargout{no+1}{:},out{no+1}}; end
-      end
+      end  
     end
   end, return                                      % return to end the recursion
 end
@@ -140,7 +140,7 @@ try                                                  % call the inference method
   end
 catch
   msgstr = lasterr;
-  if nargin>7, error('Inference method failed [%s]', msgstr); else
+  if nargin>7, error('Inference method failed [%s]', msgstr); else 
     warning('Inference method failed [%s] .. attempting to continue',msgstr)
     varargout = {NaN, vec2any(hyp,zeros(numel(any2vec(hyp)),1))}; return % go on
   end
